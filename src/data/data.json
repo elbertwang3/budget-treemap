@@ -1,0 +1,391 @@
+{
+  "data": [
+    {
+      "organization_group": "Community Health",
+      "department": "DPH Public Health",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 2764748188
+    },
+    {
+      "organization_group": "Culture & Recreation",
+      "department": "AAM Asian Art Museum",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 10598289
+    },
+    {
+      "organization_group": "Culture & Recreation",
+      "department": "ART Arts Commission",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 48609476
+    },
+    {
+      "organization_group": "Culture & Recreation",
+      "department": "FAM Fine Arts Museum",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 20806756
+    },
+    {
+      "organization_group": "Culture & Recreation",
+      "department": "LIB Public Library",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 171146593
+    },
+    {
+      "organization_group": "Culture & Recreation",
+      "department": "LLB Law Library",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 2033206
+    },
+    {
+      "organization_group": "Culture & Recreation",
+      "department": "REC Recreation & Park Commsn",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 239663471
+    },
+    {
+      "organization_group": "Culture & Recreation",
+      "department": "SCI Academy of Sciences",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 5572739
+    },
+    {
+      "organization_group": "Culture & Recreation",
+      "department": "WAR War Memorial",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 28897401
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "ADM GSA - City Administrator",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 264299766
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "ASR Assessor / Recorder",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 32647585
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "BOS Board of Supervisors",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 20316610
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "CAT City Attorney",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 32458458
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "CON Controller",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 13621888
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "CPC City Planning",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 58967056
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "CSC Civil Service Commission",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 1027473
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "DT  GSA - Technology",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 25503561
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "ETH Ethics Commission",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 6551078
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "HRD Human Resources",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 27461905
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "HSS Health Service System",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 635089
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "MYR Mayor",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 243946773
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "REG Elections",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 30601997
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "RET Retirement System",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 41250618
+    },
+    {
+      "organization_group": "General Administration & Finance",
+      "department": "TTX Treasurer/Tax Collector",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 38147304
+    },
+    {
+      "organization_group": "General City Responsibilities",
+      "department": "GEN General City / Unallocated",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 636273043
+    },
+    {
+      "organization_group": "General City Responsibilities",
+      "department": "SDA Sheriff Accountability OIG",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 1973878
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "CFC Children & Families Commsn",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 13010244
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "CHF Children;Youth & Families",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 309647967
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "CII Community Invest/Infrastr",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 220745882
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "CSS Child Support Services",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 13127955
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "ENV Environment",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 19642408
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "HOM Homelessness Services",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 660625639
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "HRC Human Rights Commission",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 14444132
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "HSA Human Services Agency",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 1312048243
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "RNT Rent Arbitration Board",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 13982121
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "USD County Education Office",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 0
+    },
+    {
+      "organization_group": "Human Welfare & Neighborhood Development",
+      "department": "WOM Status of Women",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 11121448
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "ADP Adult Probation",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 48662113
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "CRT Superior Court",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 132701856
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "DAT District Attorney",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 80557752
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "DEM Emergency Management",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 118991530
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "DPA Police Accountabilty",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 9245996
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "FIR Fire Department",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 426614374
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "JUV Juvenile Probation",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 42793703
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "PDR Public Defender",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 45200551
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "POL Police",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 649650138
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SHF Sheriff",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 239206311
+    },
+    {
+      "organization_group": "Public Works, Transportation & Commerce",
+      "department": "AIR Airport Commission",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 1151679961
+    },
+    {
+      "organization_group": "Public Works, Transportation & Commerce",
+      "department": "BOA Board of Appeals",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 1095914
+    },
+    {
+      "organization_group": "Public Works, Transportation & Commerce",
+      "department": "DBI Building Inspection",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 89493782
+    },
+    {
+      "organization_group": "Public Works, Transportation & Commerce",
+      "department": "DPW GSA - Public Works",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 202259443
+    },
+    {
+      "organization_group": "Public Works, Transportation & Commerce",
+      "department": "ECN Economic & Wrkfrce Dvlpmnt",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 147639958
+    },
+    {
+      "organization_group": "Public Works, Transportation & Commerce",
+      "department": "MTA Municipal Transprtn Agncy",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 1384453801
+    },
+    {
+      "organization_group": "Public Works, Transportation & Commerce",
+      "department": "PRT Port",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 92437882
+    },
+    {
+      "organization_group": "Public Works, Transportation & Commerce",
+      "department": "PUC Public Utilities Commsn",
+      "description": "Lorem ipsum dolor sit amet",
+      "budget": 1349852691
+    }
+  ],
+  "description": {
+    "DPH Public Health": "Lorem ipsum dolor sit amet",
+    "AAM Asian Art Museum": "Lorem ipsum dolor sit amet",
+    "ART Arts Commission": "Lorem ipsum dolor sit amet",
+    "FAM Fine Arts Museum": "Lorem ipsum dolor sit amet",
+    "LIB Public Library": "Lorem ipsum dolor sit amet",
+    "LLB Law Library": "Lorem ipsum dolor sit amet",
+    "REC Recreation & Park Commsn": "Lorem ipsum dolor sit amet",
+    "SCI Academy of Sciences": "Lorem ipsum dolor sit amet",
+    "WAR War Memorial": "Lorem ipsum dolor sit amet",
+    "ADM GSA - City Administrator": "Lorem ipsum dolor sit amet",
+    "ASR Assessor / Recorder": "Lorem ipsum dolor sit amet",
+    "BOS Board of Supervisors": "Lorem ipsum dolor sit amet",
+    "CAT City Attorney": "Lorem ipsum dolor sit amet",
+    "CON Controller": "Lorem ipsum dolor sit amet",
+    "CPC City Planning": "Lorem ipsum dolor sit amet",
+    "CSC Civil Service Commission": "Lorem ipsum dolor sit amet",
+    "DT  GSA - Technology": "Lorem ipsum dolor sit amet",
+    "ETH Ethics Commission": "Lorem ipsum dolor sit amet",
+    "HRD Human Resources": "Lorem ipsum dolor sit amet",
+    "HSS Health Service System": "Lorem ipsum dolor sit amet",
+    "MYR Mayor": "Lorem ipsum dolor sit amet",
+    "REG Elections": "Lorem ipsum dolor sit amet",
+    "RET Retirement System": "Lorem ipsum dolor sit amet",
+    "TTX Treasurer/Tax Collector": "Lorem ipsum dolor sit amet",
+    "GEN General City / Unallocated": "Lorem ipsum dolor sit amet",
+    "SDA Sheriff Accountability OIG": "Lorem ipsum dolor sit amet",
+    "CFC Children & Families Commsn": "Lorem ipsum dolor sit amet",
+    "CHF Children;Youth & Families": "Lorem ipsum dolor sit amet",
+    "CII Community Invest/Infrastr": "Lorem ipsum dolor sit amet",
+    "CSS Child Support Services": "Lorem ipsum dolor sit amet",
+    "ENV Environment": "Lorem ipsum dolor sit amet",
+    "HOM Homelessness Services": "Lorem ipsum dolor sit amet",
+    "HRC Human Rights Commission": "Lorem ipsum dolor sit amet",
+    "HSA Human Services Agency": "Lorem ipsum dolor sit amet",
+    "RNT Rent Arbitration Board": "Lorem ipsum dolor sit amet",
+    "USD County Education Office": "Lorem ipsum dolor sit amet",
+    "WOM Status of Women": "Lorem ipsum dolor sit amet",
+    "ADP Adult Probation": "Lorem ipsum dolor sit amet",
+    "CRT Superior Court": "Lorem ipsum dolor sit amet",
+    "DAT District Attorney": "Lorem ipsum dolor sit amet",
+    "DEM Emergency Management": "Lorem ipsum dolor sit amet",
+    "DPA Police Accountabilty": "Lorem ipsum dolor sit amet",
+    "FIR Fire Department": "Lorem ipsum dolor sit amet",
+    "JUV Juvenile Probation": "Lorem ipsum dolor sit amet",
+    "PDR Public Defender": "Lorem ipsum dolor sit amet",
+    "POL Police": "Lorem ipsum dolor sit amet",
+    "SHF Sheriff": "Lorem ipsum dolor sit amet",
+    "AIR Airport Commission": "Lorem ipsum dolor sit amet",
+    "BOA Board of Appeals": "Lorem ipsum dolor sit amet",
+    "DBI Building Inspection": "Lorem ipsum dolor sit amet",
+    "DPW GSA - Public Works": "Lorem ipsum dolor sit amet",
+    "ECN Economic & Wrkfrce Dvlpmnt": "Lorem ipsum dolor sit amet",
+    "MTA Municipal Transprtn Agncy": "Lorem ipsum dolor sit amet",
+    "PRT Port": "Lorem ipsum dolor sit amet",
+    "PUC Public Utilities Commsn": "Lorem ipsum dolor sit amet"
+  }
+}

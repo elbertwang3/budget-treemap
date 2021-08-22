@@ -1,30 +1,42 @@
 <script>
-	export let name;
+  import { LayerCake, Svg } from "layercake";
+  import { data } from "./data/data";
+  import Treemap from "./Treemap.svelte";
+  import Tooltip from "./Tooltip.svelte";
+  import { group } from "d3-array";
+  import { format } from "d3-format";
+
+  let hovered;
+
+  const rootHeight = 60;
+  const grouped = group(
+    data,
+    (d) => d["organization_group"],
+    (d) => d.department
+  );
+
+  function formatDollars(d) {
+    return format("$0.3s")(d).replace(/G/, "B").toLowerCase();
+  }
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <div class="chart-container">
+    <LayerCake
+      data={grouped}
+      padding={{ top: rootHeight, right: 0, bottom: 0, left: 0 }}
+    >
+      <Svg>
+        <Treemap bind:hovered {formatDollars} {rootHeight} />
+      </Svg>
+      <Tooltip {hovered} {formatDollars} />
+    </LayerCake>
+  </div>
 </main>
 
 <style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
+  .chart-container {
+    width: 100%;
+    height: 100vh;
+  }
 </style>
