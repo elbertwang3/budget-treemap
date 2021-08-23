@@ -10,7 +10,7 @@
   let tooltipWidth, tooltipHeight;
 
   $: if (hovered) {
-    console.log(hovered.data);
+    // console.log(hovered.data);
     // console.log(rootHeight);
     // console.log(hovered.data);
     // console.log(formatDollars(hovered.data.value));

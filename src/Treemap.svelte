@@ -111,7 +111,9 @@
           ? `translate(0,${-rootHeight})`
           : `translate(${x(d.x0)},${y(d.y0)})`}
         on:mousemove={(e) => {
-          hovered = { e: e, data: d };
+          if (!isEqual(d, root)) {
+            hovered = { e: e, data: d };
+          }
         }}
         on:mouseout={() => (hovered = null)}
       >
