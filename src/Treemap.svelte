@@ -4,7 +4,8 @@
   import { scaleLinear } from "d3-scale";
   import { some, isEqual } from "lodash";
   import Node from "./Node.svelte";
-  //   import { fade, fly } from "svelte/transition";
+  import { flatGroup } from "d3-array";
+  import { fade, fly } from "svelte/transition";
 
   export let hovered, formatDollars, rootHeight;
 
@@ -25,7 +26,7 @@
 
   $: treeMapFn = treemap()
     .tile(treemapBinary)
-    .padding(1)
+    // .padding(1)
     // .paddingInner(1)
     // .paddingOuter(1)
     .round(false)
@@ -38,7 +39,14 @@
   );
   //   $: console.log(root);
 
-  $: nodes = root.children.concat(root);
+  $: nodes = [root].concat(root.children);
+  $: console.log(nodes);
+
+  $: renderedNodes = root.children
+    .concat(root)
+    .concat(root.children.map((d) => d.children).flat());
+
+  //   $: console.log(nodes);
 
   $: descendants = treeMapFn(
     hierarchy($data)
@@ -70,7 +78,8 @@
   // When zooming in, draw the new nodes on top, and fade them in.
   function zoomin(d) {
     console.log("zooming in");
-    if (d.children) {
+    console.log(d);
+    if (d.children && d.depth <= 4) {
       x = x.domain([d.x0, d.x1]);
       y = y.domain([d.y0, d.y1]);
       root = d;
@@ -87,57 +96,95 @@
     }
   }
 
-  function tile(node, x0, y0, x1, y1) {
-    treemapBinary(node, 0, 0, $width, $height);
-    for (const child of node.children) {
-      child.x0 = x0 + (child.x0 / $width) * (x1 - x0);
-      child.x1 = x0 + (child.x1 / $width) * (x1 - x0);
-      child.y0 = y0 + (child.y0 / $height) * (y1 - y0);
-      child.y1 = y0 + (child.y1 / $height) * (y1 - y0);
-    }
-  }
+  //   function tile(node, x0, y0, x1, y1) {
+  //     treemapBinary(node, 0, 0, $width, $height);
+  //     for (const child of node.children) {
+  //       child.x0 = x0 + (child.x0 / $width) * (x1 - x0);
+  //       child.x1 = x0 + (child.x1 / $width) * (x1 - x0);
+  //       child.y0 = y0 + (child.y0 / $height) * (y1 - y0);
+  //       child.y1 = y0 + (child.y1 / $height) * (y1 - y0);
+  //     }
+  //   }
+
+  //   function transform(node, { delay = 0, duration = 750, d }) {
+  //     return {
+  //       delay,
+  //       duration,
+  //       css: (t) =>
+  //         `transform: ${
+  //           isEqual(d, root)
+  //             ? `translate(0,${t * -rootHeight})`
+  //             : `translate(${t * x(d.x0)},${t * y(d.y0)})`
+  //         }`,
+  //     };
+  //   }
+
+  //   function resize(node, { delay = 0, duration = 750, d }) {
+  //     console.log("resizing");
+  //     const o = +getComputedStyle(node).opacity;
+
+  //     return {
+  //       delay,
+  //       duration,
+  //       css: (t) =>
+  //         `transform: width: ${t * (x(d.x1) - x(d.x0))}; height: ${
+  //           isEqual(d, root) ? t * $height : t * (y(d.y1) - y(d.y0))
+  //         }`,
+  //     };
+  //   }
   // on:click={(event) => (isEqual(d, root) ? zoomout(root) : zoomin(d))}
+  //       transition:transform={{ d: d }}
 </script>
 
 <g class="treemap-layer">
-  {#each descendants as d, i}
-    {#if d.depth == 2 || isEqual(d, root)}
-      <!-- content here -->
-      <g
-        class={`node`}
-        class:root={isEqual(d, root)}
-        class:active={d.depth == 2}
-        transform={isEqual(d, root)
-          ? `translate(0,${-rootHeight})`
-          : `translate(${x(d.x0)},${y(d.y0)})`}
-        on:mousemove={(e) => {
-          if (!isEqual(d, root)) {
-            hovered = { e: e, data: d };
-          }
-        }}
-        on:mouseout={() => (hovered = null)}
+  {#each nodes as d, i (`${d.data[0]}-${d.depth}-${d.value}`)}
+    <g
+      class={`node`}
+      class:root={isEqual(d, root)}
+      class:active={some(nodes, d)}
+      transform={isEqual(d, root)
+        ? `translate(0,${-rootHeight})`
+        : `translate(${x(d.x0)},${y(d.y0)})`}
+      on:mousemove={(e) => {
+        if (!isEqual(d, root)) {
+          hovered = { e: e, data: d };
+        }
+      }}
+      transition:fade={{ duration: 1000 }}
+      on:click={(event) => (isEqual(d, root) ? zoomout(root) : zoomin(d))}
+      on:mouseout={() => (hovered = null)}
+      on:blur={() => (hovered = null)}
+    >
+      <rect
+        id={`rect-${i}`}
+        width={x(d.x1) - x(d.x0)}
+        height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0)}
+        fill={isEqual(d, root) ? "#fff" : color[getCategory(d)]}
+      />
+      <clipPath id={`node-${i}`}>
+        <use xlink:href={`#rect-${i}`} />
+      </clipPath>
+      <text class="cat" clip-path={`url(#node-${i})`} x={6} y={10}>
+        {d.data[0] ? d.data[0] : "Budget"}
+      </text>
+      <text
+        class="value"
+        clip-path={`url(#node-${i})`}
+        x={6}
+        y={isEqual(d, root) ? 35 : 25}
       >
-        <rect
-          id={`rect-${i}`}
-          width={x(d.x1) - x(d.x0)}
-          height={isEqual(d, root) ? rootHeight : y(d.y1) - y(d.y0)}
-          fill={isEqual(d, root) ? "#fff" : color[getCategory(d)]}
-        />
-        <clipPath id={`node-${i}`}>
-          <use xlink:href={`#rect-${i}`} />
-        </clipPath>
-        <text class="cat" clip-path={`url(#node-${i})`} x={6} y={10}>
-          {d.data[0] ? d.data[0] : "Total"}
-        </text>
-        <text
-          class="value"
-          clip-path={`url(#node-${i})`}
-          x={6}
-          y={isEqual(d, root) ? 35 : 25}
-        >
-          {formatDollars(d.value)}
-        </text>
-      </g>
+        {formatDollars(d.value)}
+      </text>
+    </g>
+    {#if hovered}
+      <rect
+        transform={`translate(${x(hovered.data.x0)},${y(hovered.data.y0)})`}
+        class="rect-stroke"
+        width={x(hovered.data.x1) - x(hovered.data.x0)}
+        height={isEqual(hovered.data, root)
+          ? $height
+          : y(hovered.data.y1) - y(hovered.data.y0)}
+      />
     {/if}
   {/each}
 </g>
@@ -149,7 +196,7 @@
     alignment-baseline: hanging;
     fill: #333;
   }
-  /* 
+
   .node {
     pointer-events: none;
     opacity: 0;
@@ -159,14 +206,24 @@
     pointer-events: all;
     opacity: 1;
     cursor: pointer;
-    transition: all 0.75s;
-  } */
-
-  .node {
-    cursor: pointer;
+    transition: all 1s;
   }
 
+  .node.active rect {
+    transition: all 1s;
+  }
+
+  /* .node {
+    cursor: pointer;
+  } */
+
   .node.active rect:hover {
+    /* stroke: #333;
+    stroke-width: 2; */
+  }
+
+  .rect-stroke {
+    fill: none;
     stroke: #333;
     stroke-width: 2;
   }
@@ -196,5 +253,9 @@
 
   .node.root .value {
     font-size: 24px;
+  }
+
+  *:focus {
+    outline: none;
   }
 </style>

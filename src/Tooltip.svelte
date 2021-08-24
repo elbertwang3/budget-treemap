@@ -1,7 +1,7 @@
 <script>
   import { getContext } from "svelte";
   import { format } from "d3-format";
-  import { description } from "./data/data";
+  import { descriptions } from "./data/data";
 
   export let hovered, formatDollars;
 
@@ -48,7 +48,10 @@
     <div class="cat">
       {hovered.data.data[0] ? hovered.data.data[0] : "Total"}
     </div>
-    <div class="description">{description[hovered.data.data[0]]}</div>
+    {#if descriptions[hovered.data.data[0]]}
+      <div class="description">{descriptions[hovered.data.data[0]]}</div>
+    {/if}
+
     <div class="value">{formatDollars(hovered.data.value)}</div>
   {/if}
 </div>

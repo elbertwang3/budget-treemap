@@ -12,8 +12,13 @@
   const grouped = group(
     data,
     (d) => d["organization_group"],
-    (d) => d.department
+    (d) => d.department,
+    (d) => d.program,
+    (d) => d.character,
+    (d) => d.object
   );
+
+  console.log(grouped);
 
   function formatDollars(d) {
     return format("$0.3s")(d).replace(/G/, "B").toLowerCase();

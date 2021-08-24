@@ -14,10 +14,33 @@ module.exports = {
    */
   dataMutators: {
     data(originalData) {
-      originalData.description = originalData.data.reduce((obj, item) => {
+      const { descriptions, data, department, program, character, object } =
+        originalData;
+      originalData.descriptions = descriptions.reduce((obj, item) => {
         obj[item.department] = item.description;
         return obj;
       }, {});
+
+      const departmentDict = objectify(department);
+      const programDict = objectify(program);
+      const characterDict = objectify(character);
+      const objectDict = objectify(object);
+
+      data.forEach((d) => {
+        if (departmentDict[d.department]) {
+          d.department = departmentDict[d.department];
+        }
+        if (programDict[d.program]) {
+          d.program = programDict[d.program];
+        }
+        if (characterDict[d.character]) {
+          d.character = characterDict[d.character];
+        }
+        if (objectDict[d.object]) {
+          d.object = objectDict[d.object];
+        }
+      });
+      originalData.data = data;
       return originalData;
     },
   },
@@ -32,3 +55,10 @@ module.exports = {
    */
   apis: [],
 };
+
+function objectify(array) {
+  return array.reduce((obj, item) => {
+    obj[item.old] = item.new;
+    return obj;
+  }, {});
+}
