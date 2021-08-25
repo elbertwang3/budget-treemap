@@ -1,61 +1,4 @@
 {
-  "descriptions": {
-    "Public Health (DPH)": "Administers a wide range of public health services and programs, including SF General and Laguna Honda hospitals.",
-    "Asian Art Museum (AAM)": "City-owned museum showcasing art from Asian cultures. ",
-    "Arts Commission (ART)": "Develops public arts programming, gives grants and issues art vendor licenses.",
-    "Fine Arts Museum (FAM)": "Oversees the De Young Museum and Legion of Honor. ",
-    "Public Library (LIB)": "Manages the city's main branch and neighborhood libraries.",
-    "Law Library (LLB)": "Oversees the SF Law Library, a collection of legal resources for the public and legal community. ",
-    "Rec & Park Commission (REC)": "Oversees more than 220 public parks, playgrounds and open spaces. ",
-    "Academy of Sciences (SCI)": "Museum and research institute in Golden Gate Park.",
-    "War Memorial (WAR)": "City-owned opera house and performing arts centers. ",
-    "City Administrator (ADM)": "Oversees a range of city services, such as the County Clerk, capital planning program, office of contract administration and others. ",
-    "Assessor/Recorder (ASR)": "Assesses and maintains records of all taxable property in San Francisco. ",
-    "Board of Supervisors (BOS)": "11-member legislative body that sets city policy, and adopts ordinances and resolutions.",
-    "City Attorney (CAT)": "Law office representing the City and County of San Francisco.",
-    "Controller (CON)": "Chief budget office and auditor for San Francisco. ",
-    "Planning (CPC)": "Oversees long-range city planning, design review and environmental review for developments. ",
-    "Civil Service Commission (CSC)": "Oversees the city's merit system and sets policy for hiring and contracting. ",
-    "Technology (DT)": "Main governance body that makes decisions regarding the city's technology.",
-    "Ethics Commission (ETH)": "Promotes education and enforcement of governmental ethics laws.",
-    "Human Resources  (HRD)": "Hires, develops, and supports the city's workforce. ",
-    "Health Service System (HSS)": "Administers health benefits for employees and retirees of the city, SFUSD, City College of San Francisco and SF Superior Court.",
-    "Mayor (MYR)": "San Francisco's chief executive. Sets policy, coordinates departments and intergovernmental activites, and prepares the budget. ",
-    "Elections (REG)": "Conducts elections and election-related services, and ensures voting access. ",
-    "Retirement System (RET)": "Administers pension and a compensation plans for current and retired city workers.",
-    "Treasurer/Tax Collector (TTX)": "Banker, tax collector, collection agent and investment officer for the city. ",
-    "General/Unallocated (GEN)": "Responsibilities not directly attributable to one city department, or that are citywide in nature.",
-    "Sheriff Accountability OIG (SDA)": "Civilian oversight body for the Sheriff's Department.",
-    "Children & Families Commission (CFC)": "Develops and funds programming for young children and their families.",
-    "Children, Youth & Families (CHF)": "Creates and facilitates citywide policy and projects in support of children, youth and families.",
-    "Community Investment (CII)": "Redevelopment agency that coordinates financing, affordable housing, and design and land use approvals for new neighborhoods.",
-    "Child Support Services (CSS)": "Establishes and enforces child and medical support orders.",
-    "Environment (ENV)": "Sets and implements policy on waste reduction, renewable energy, nature conservation and other environmental goals. ",
-    "Homelessness Services (HOM)": "Oversees programs and contracts related to homelessness and supportive housing. ",
-    "Human Rights Commission (HRC)": "Enforces the city’s anti-discrimination laws and promotes community racial solidarity and healing.",
-    "Human Services Agency (HSA)": "Provides food and cash assistance, health insurance, job training, early education and supportive care.",
-    "Rent Arbitration Board (RNT)": "Conducts rent arbitrations and mediations, and investigates wrongful evictions.",
-    "County Education Office (USD)": "San Francisco Unified School District, an independent entity.",
-    "Status of Women (WOM)": "Promotes the advancement of women and girls through policies, legislation and programs.",
-    "Adult Probation (ADP)": "Administers and coordinates reetnry programs, victims services and specialized court services for adult criminal offenders. ",
-    "Superior Court (CRT)": "State court with jurisdiction over the city and county of San Francisco. ",
-    "District Attorney (DAT)": "Prosecutes criminal violations of state and local laws.",
-    "Emergency Management (DEM)": "Manages disaster and emergency response, including 911. ",
-    "Police Accountability (DPA)": "Investigates complaints about police officers and recommends policy changes.",
-    "Fire Department (FIR)": "Provides firefighting, disaster response and emergency medial assistance. ",
-    "Juvenile Probation (JUV)": "Coordinates probation and rehabilitation services for youth offenders. ",
-    "Public Defender (PDR)": "Provides legal defense and services to criminal defendants. ",
-    "Police (POL)": "Enforces laws and investigates criminal activity. ",
-    "Sheriff (SHF)": "Manages jail and court services and provides other law enforcement support. ",
-    "Airport Commission (AIR)": "Oversees operations and maintenance of San Francisco International Airport. ",
-    "Board of Appeals (BOA)": "Hears and decides appeals related to permits, licenses and other use entitlements.",
-    "Building Inspection (DBI)": "Approves plans and issues permits all construction in the city. ",
-    "Public Works (DPW)": "Maintains and improves civic buildings, streets and other public infrastructure. ",
-    "Economic & Workforce Development (ECN)": "Coordinates small business services, economic and neighborhood development, and job placement programs. ",
-    "Municipal Transporation (MTA)": "Manages Muni and transit infrastructure, including walking, bicycling, parking, driving, paratransit, and taxis.",
-    "Port (PRT)": "Oversees operations and maintenance of the Port of San Francisco. ",
-    "Public Utilities (PUC)": "Provides water, power, and sewer services. "
-  },
   "data": [
     {
       "organization_group": "Community Health",
@@ -2294,7 +2237,7 @@
       "department": "Public Library (LIB)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-HR-Tuition Reimbursemnt W-O",
+      "object": "Tuition Reimbursement (HR)",
       "budget": 5365
     },
     {
@@ -2422,7 +2365,7 @@
       "department": "Public Library (LIB)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 249461
     },
     {
@@ -4542,7 +4485,7 @@
       "department": "City Administrator (ADM)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Engineering",
+      "object": "Engineering (DPW)",
       "budget": 3350106
     },
     {
@@ -4550,7 +4493,7 @@
       "department": "City Administrator (ADM)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-General Administration",
+      "object": "General Administration (DPW)",
       "budget": 2859
     },
     {
@@ -4558,7 +4501,7 @@
       "department": "City Administrator (ADM)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 112109
     },
     {
@@ -6326,7 +6269,7 @@
       "department": "Planning (CPC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-General Administration",
+      "object": "General Administration (DPW)",
       "budget": 41626
     },
     {
@@ -11182,7 +11125,7 @@
       "department": "Environment (ENV)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-HR-Tuition Reimbursemnt W-O",
+      "object": "Tuition Reimbursement (HR)",
       "budget": 4460
     },
     {
@@ -11206,7 +11149,7 @@
       "department": "Environment (ENV)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Library Services",
+      "object": "Library Services",
       "budget": 75661
     },
     {
@@ -11246,7 +11189,7 @@
       "department": "Environment (ENV)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 3048085
     },
     {
@@ -11790,7 +11733,7 @@
       "department": "Homelessness Services (HOM)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 128608
     },
     {
@@ -13046,7 +12989,7 @@
       "department": "Human Services Agency (HSA)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 47948
     },
     {
@@ -13302,7 +13245,7 @@
       "department": "Rent Arbitration Board (RNT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-HR-Tuition Reimbursemnt W-O",
+      "object": "Tuition Reimbursement (HR)",
       "budget": 11948
     },
     {
@@ -15950,7 +15893,7 @@
       "department": "Fire Department (FIR)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 14918
     },
     {
@@ -18606,7 +18549,7 @@
       "department": "Airport Commission (AIR)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-HR-Tuition Reimbursemnt W-O",
+      "object": "Tuition Reimbursement (HR)",
       "budget": 50103
     },
     {
@@ -19350,7 +19293,7 @@
       "department": "Building Inspection (DBI)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Disability Access",
+      "object": "Disability Access",
       "budget": 434000
     },
     {
@@ -19406,7 +19349,7 @@
       "department": "Building Inspection (DBI)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-HR-Tuition Reimbursemnt W-O",
+      "object": "Tuition Reimbursement (HR)",
       "budget": 9163
     },
     {
@@ -19494,7 +19437,7 @@
       "department": "Building Inspection (DBI)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-General Administration",
+      "object": "General Administration (DPW)",
       "budget": 156096
     },
     {
@@ -20094,7 +20037,7 @@
       "department": "Public Works (DPW)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Engineering",
+      "object": "Engineering (DPW)",
       "budget": 20000
     },
     {
@@ -20110,7 +20053,7 @@
       "department": "Public Works (DPW)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 39656
     },
     {
@@ -20542,7 +20485,7 @@
       "department": "Economic & Workforce Development (ECN)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-General Administration",
+      "object": "General Administration (DPW)",
       "budget": 4709880
     },
     {
@@ -21006,7 +20949,7 @@
       "department": "Municipal Transporation (MTA)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "EF-Airport",
+      "object": "Airport ",
       "budget": 136195
     },
     {
@@ -21366,7 +21309,7 @@
       "department": "Municipal Transporation (MTA)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-General Administration",
+      "object": "General Administration (DPW)",
       "budget": 41626
     },
     {
@@ -21374,7 +21317,7 @@
       "department": "Municipal Transporation (MTA)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 1592581
     },
     {
@@ -21678,7 +21621,7 @@
       "department": "Municipal Transporation (MTA)",
       "program": "Special Events",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 53314
     },
     {
@@ -22062,7 +22005,7 @@
       "department": "Port (PRT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "EF-Airport",
+      "object": "Airport ",
       "budget": 51000
     },
     {
@@ -22214,7 +22157,7 @@
       "department": "Port (PRT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-HR-Tuition Reimbursemnt W-O",
+      "object": "Tuition Reimbursement (HR)",
       "budget": 9177
     },
     {
@@ -22358,7 +22301,7 @@
       "department": "Port (PRT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Engineering",
+      "object": "Engineering (DPW)",
       "budget": 40600
     },
     {
@@ -22366,7 +22309,7 @@
       "department": "Port (PRT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 200000
     },
     {
@@ -22438,7 +22381,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Administrative",
       "character": "Intrafund Transfers Out",
-      "object": "ITO To 5W-Water Department Fd",
+      "object": "Water Department Fund",
       "budget": 83850219
     },
     {
@@ -22798,7 +22741,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Administrative",
       "character": "Services Of Other Depts",
-      "object": "GF-HR-Tuition Reimbursemnt W-O",
+      "object": "Tuition Reimbursement (HR)",
       "budget": 13625
     },
     {
@@ -22854,7 +22797,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Administrative",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Engineering",
+      "object": "Engineering (DPW)",
       "budget": 136316
     },
     {
@@ -23614,7 +23557,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-HR-Tuition Reimbursemnt W-O",
+      "object": "Tuition Reimbursement (HR)",
       "budget": 62258
     },
     {
@@ -23814,7 +23757,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Engineering",
+      "object": "Engineering (DPW)",
       "budget": 876151
     },
     {
@@ -23822,7 +23765,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-General Administration",
+      "object": "General Administration (DPW)",
       "budget": 41626
     },
     {
@@ -23838,7 +23781,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-DPW-Street Cleaning",
+      "object": "Street Cleaning (DPW)",
       "budget": 5710815
     },
     {
@@ -23890,6 +23833,64 @@
       "budget": 531712
     }
   ],
+  "descriptions": {
+    "Public Health (DPH)": "Administers a wide range of public health services and programs, including SF General and Laguna Honda hospitals.",
+    "Asian Art Museum (AAM)": "City-owned museum showcasing art from Asian cultures. ",
+    "Arts Commission (ART)": "Develops public arts programming, gives grants and issues art vendor licenses.",
+    "Fine Arts Museum (FAM)": "Oversees the De Young Museum and Legion of Honor. ",
+    "Public Library (LIB)": "Manages the city's main branch and neighborhood libraries.",
+    "Law Library (LLB)": "Oversees the SF Law Library, a collection of legal resources for the public and legal community. ",
+    "Rec & Park Commission (REC)": "Oversees more than 220 public parks, playgrounds and open spaces. ",
+    "Academy of Sciences (SCI)": "Museum and research institute in Golden Gate Park.",
+    "War Memorial (WAR)": "City-owned opera house and performing arts centers. ",
+    "City Administrator (ADM)": "Oversees a range of city services, such as the County Clerk, capital planning program, office of contract administration and others. ",
+    "Assessor/Recorder (ASR)": "Assesses and maintains records of all taxable property in San Francisco. ",
+    "Board of Supervisors (BOS)": "11-member legislative body that sets city policy, and adopts ordinances and resolutions.",
+    "City Attorney (CAT)": "Law office representing the City and County of San Francisco.",
+    "Controller (CON)": "Chief budget office and auditor for San Francisco. ",
+    "Planning (CPC)": "Oversees long-range city planning, design review and environmental review for developments. ",
+    "Civil Service Commission (CSC)": "Oversees the city's merit system and sets policy for hiring and contracting. ",
+    "Technology (DT)": "Provides technology services to city departments and agencies.",
+    "Ethics Commission (ETH)": "Promotes education and enforcement of governmental ethics laws.",
+    "Human Resources  (HRD)": "Hires, develops, and supports the city's workforce. ",
+    "Health Service System (HSS)": "Administers health benefits for employees and retirees of the city, SFUSD, City College of San Francisco and SF Superior Court.",
+    "Mayor (MYR)": "San Francisco's chief executive. Sets policy, coordinates departments and intergovernmental activites, and prepares the budget. ",
+    "Elections (REG)": "Conducts elections and election-related services, and ensures voting access. ",
+    "Retirement System (RET)": "Administers pension and a compensation plans for current and retired city workers.",
+    "Treasurer/Tax Collector (TTX)": "Banker, tax collector, collection agent and investment officer for the city. ",
+    "General/Unallocated (GEN)": "Responsibilities not directly attributable to one city department, or that are citywide in nature.",
+    "Sheriff Accountability OIG (SDA)": "Civilian oversight body for the Sheriff's Department.",
+    "Children & Families Commission (CFC)": "Develops and funds programming for young children and their families.",
+    "Children, Youth & Families (CHF)": "Creates and facilitates citywide policy and projects in support of children, youth and families.",
+    "Community Investment (CII)": "Redevelopment agency that coordinates financing, affordable housing, and design and land use approvals for new neighborhoods.",
+    "Child Support Services (CSS)": "Establishes and enforces child and medical support orders.",
+    "Environment (ENV)": "Sets and implements policy on waste reduction, renewable energy, nature conservation and other environmental goals. ",
+    "Homelessness Services (HOM)": "Oversees programs and contracts related to homelessness and supportive housing. ",
+    "Human Rights Commission (HRC)": "Enforces the city’s anti-discrimination laws and promotes community racial solidarity and healing.",
+    "Human Services Agency (HSA)": "Provides food and cash assistance, health insurance, job training, early education and supportive care.",
+    "Rent Arbitration Board (RNT)": "Conducts rent arbitrations and mediations, and investigates wrongful evictions.",
+    "County Education Office (USD)": "San Francisco Unified School District, an independent entity.",
+    "Status of Women (WOM)": "Promotes the advancement of women and girls through policies, legislation and programs.",
+    "Adult Probation (ADP)": "Administers and coordinates reetnry programs, victims services and specialized court services for adult criminal offenders. ",
+    "Superior Court (CRT)": "State court with jurisdiction over the city and county of San Francisco. ",
+    "District Attorney (DAT)": "Prosecutes criminal violations of state and local laws.",
+    "Emergency Management (DEM)": "Manages disaster and emergency response, including 911. ",
+    "Police Accountability (DPA)": "Investigates complaints about police officers and recommends policy changes.",
+    "Fire Department (FIR)": "Provides firefighting, disaster response and emergency medial assistance. ",
+    "Juvenile Probation (JUV)": "Coordinates probation and rehabilitation services for youth offenders. ",
+    "Public Defender (PDR)": "Provides legal defense and services to criminal defendants. ",
+    "Police (POL)": "Enforces laws and investigates criminal activity. ",
+    "Sheriff (SHF)": "Manages jail and court services and provides other law enforcement support. ",
+    "Airport Commission (AIR)": "Oversees operations and maintenance of San Francisco International Airport. ",
+    "Board of Appeals (BOA)": "Hears and decides appeals related to permits, licenses and other use entitlements.",
+    "Building Inspection (DBI)": "Approves plans and issues permits all construction in the city. ",
+    "Public Works (DPW)": "Maintains and improves civic buildings, streets and other public infrastructure. ",
+    "Economic & Workforce Development (ECN)": "Coordinates small business services, economic and neighborhood development, and job placement programs. ",
+    "Municipal Transporation (MTA)": "Manages Muni and transit infrastructure, including walking, bicycling, parking, driving, paratransit, and taxis.",
+    "Port (PRT)": "Oversees operations and maintenance of the Port of San Francisco. ",
+    "Public Utilities (PUC)": "Provides water, power, and sewer services. ",
+    "Community Health": "hello"
+  },
   "department": [
     {
       "old": "SCI Academy of Sciences",
@@ -24800,6 +24801,78 @@
     {
       "old": "GF-Chf-Youth Works",
       "new": "Youth Works (CHF)"
+    },
+    {
+      "old": "ITO To 5W-Water Department Fd",
+      "new": "Water Department Fund"
+    },
+    {
+      "old": "Bldg. Structures/Improvements",
+      "new": "Building: Structures/Improvements"
+    },
+    {
+      "old": "GF-Human rights Commission",
+      "new": "Human Rights Commission"
+    },
+    {
+      "old": "Sr-DPW-Street Cleaning",
+      "new": "Street Cleaning (DPW)"
+    },
+    {
+      "old": "EF-Airport",
+      "new": "Airport "
+    },
+    {
+      "old": "Sr-DPW-Engineering",
+      "new": "Engineering (DPW)"
+    },
+    {
+      "old": "City Hall Fellows Progra,",
+      "new": "City Hall Fellows Program"
+    },
+    {
+      "old": "board of supervisors",
+      "new": "Board of Supervisors"
+    },
+    {
+      "old": "GF-HR-Tuition Reimbursemnt W-O",
+      "new": "Tuition Reimbursement (HR)"
+    },
+    {
+      "old": "Port of San Francisc",
+      "new": "Port of San Francisco"
+    },
+    {
+      "old": "GF-Assessor's Office",
+      "new": "Assessor's Office "
+    },
+    {
+      "old": "GF-Disability Access",
+      "new": "Disability Access"
+    },
+    {
+      "old": "Sr-DPW-General Administration",
+      "new": "General Administration (DPW)"
+    },
+    {
+      "old": "Workers' Comp Claims (GR)",
+      "new": "Workers' Comp Claims"
+    },
+    {
+      "old": "Risk Management Services (AAO)",
+      "new": "Risk Management Services"
+    },
+    {
+      "old": "Capi Aid payments",
+      "new": "CAPI Aid Payments"
+    },
+    {
+      "old": "GF-Library Services",
+      "new": "Library Services"
+    },
+    {
+      "old": "ef-Port Commission",
+      "new": "Port Commission"
     }
   ]
 }

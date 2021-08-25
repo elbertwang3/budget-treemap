@@ -18,8 +18,6 @@
     (d) => d.object
   );
 
-  console.log(grouped);
-
   function formatDollars(d) {
     return format("$0.3s")(d).replace(/G/, "B").toLowerCase();
   }

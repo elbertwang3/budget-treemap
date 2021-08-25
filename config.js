@@ -17,7 +17,7 @@ module.exports = {
       const { descriptions, data, department, program, character, object } =
         originalData;
       originalData.descriptions = descriptions.reduce((obj, item) => {
-        obj[item.department] = item.description;
+        obj[item.name] = item.description;
         return obj;
       }, {});
 

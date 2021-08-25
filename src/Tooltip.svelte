@@ -46,7 +46,7 @@
   {#if hovered}
     <div class="breadcrumb">{getBreadcrumb(hovered.data)}</div>
     <div class="cat">
-      {hovered.data.data[0] ? hovered.data.data[0] : "Total"}
+      {hovered.data.data[0]}
     </div>
     {#if descriptions[hovered.data.data[0]]}
       <div class="description">{descriptions[hovered.data.data[0]]}</div>

@@ -40,45 +40,33 @@
   //   $: console.log(root);
 
   $: nodes = [root].concat(root.children);
-  $: console.log(nodes);
 
-  $: renderedNodes = root.children
-    .concat(root)
-    .concat(root.children.map((d) => d.children).flat());
+  // $: renderedNodes = root.children
+  //   .concat(root)
+  //   .concat(root.children.map((d) => d.children).flat());
 
-  //   $: console.log(nodes);
+  // $: descendants = treeMapFn(
+  //   hierarchy($data)
+  //     .sum((d) => d.budget)
+  //     .sort((a, b) => b.value - a.value)
+  // ).descendants();
 
-  $: descendants = treeMapFn(
-    hierarchy($data)
-      .sum((d) => d.budget)
-      .sort((a, b) => b.value - a.value)
-  ).descendants();
-
-  //   $: console.log(descendants);
-
-  //   $: descendants.filter((d) => (d.show = some(nodes, d)));
-  //   $: console.log(descendants);
-  // .forEach((d) => {
-  //   console.log(d);
-  //   d.show = some(nodes, d);
-  //   console.log(d.show);
-  // });
-
-  //   $: console.log(descendants);
-
-  //   $: nodes = root.children.concat(root);
-
-  //   $: console.log(nodes);
-
-  function getCategory(d) {
-    while (d.depth > 1) d = d.parent;
+  function getCategory(d, depth) {
+    while (d.depth > depth) d = d.parent;
     return d.data[0];
+  }
+
+  function getBreadcrumb(d) {
+    let result = [];
+    while (d.depth >= 1) {
+      result.push(d.data[0]);
+      d = d.parent;
+    }
+    return result.join(">");
   }
 
   // When zooming in, draw the new nodes on top, and fade them in.
   function zoomin(d) {
-    console.log("zooming in");
-    console.log(d);
     if (d.children && d.depth <= 4) {
       x = x.domain([d.x0, d.x1]);
       y = y.domain([d.y0, d.y1]);
@@ -139,7 +127,7 @@
 <g class="treemap-layer">
   {#each nodes as d, i (`${d.data[0]}-${d.depth}-${d.value}`)}
     <g
-      class={`node`}
+      class={`node depth-${d.depth}`}
       class:root={isEqual(d, root)}
       class:active={some(nodes, d)}
       transform={isEqual(d, root)
@@ -159,13 +147,17 @@
         id={`rect-${i}`}
         width={x(d.x1) - x(d.x0)}
         height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0)}
-        fill={isEqual(d, root) ? "#fff" : color[getCategory(d)]}
+        fill={isEqual(d, root) ? "#fff" : color[getCategory(d, 1)]}
       />
       <clipPath id={`node-${i}`}>
         <use xlink:href={`#rect-${i}`} />
       </clipPath>
       <text class="cat" clip-path={`url(#node-${i})`} x={6} y={10}>
-        {d.data[0] ? d.data[0] : "Budget"}
+        {isEqual(d, root) && d.data[0] && d.depth > 2
+          ? `${getCategory(d, 2)} > ${d.data[0]}`
+          : d.data[0]
+          ? d.data[0]
+          : "Budget"}
       </text>
       <text
         class="value"
@@ -207,6 +199,11 @@
     opacity: 1;
     cursor: pointer;
     transition: all 1s;
+  }
+
+  .node.active.depth-5,
+  .node.active.depth-0 {
+    cursor: default;
   }
 
   .node.active rect {
