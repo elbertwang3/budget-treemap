@@ -23889,7 +23889,9 @@
     "Municipal Transporation (MTA)": "Manages Muni and transit infrastructure, including walking, bicycling, parking, driving, paratransit, and taxis.",
     "Port (PRT)": "Oversees operations and maintenance of the Port of San Francisco. ",
     "Public Utilities (PUC)": "Provides water, power, and sewer services. ",
-    "Community Health": "hello"
+    "Technology (COIT Funded)": "Funding allocated by the Committee on Information Technology, the city's tech governance and policy making body.",
+    "Capital (CPC Funded)": "Funding allocated by the Capital Planning Committee, which makes recommendations on capital expenditures. ",
+    "Maintenance (CPC Funded)": "Funding allocated by the Capital Planning Committee, which makes recommendations on capital expenditures. "
   },
   "department": [
     {

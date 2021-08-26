@@ -1,6 +1,11 @@
 <script>
   import { getContext } from "svelte";
-  import { treemap, hierarchy, treemapBinary } from "d3-hierarchy";
+  import {
+    treemap,
+    hierarchy,
+    treemapBinary,
+    treemapSquarify,
+  } from "d3-hierarchy";
   import { scaleLinear } from "d3-scale";
   import { some, isEqual } from "lodash";
   import Node from "./Node.svelte";
@@ -25,7 +30,7 @@
   $: y = scaleLinear().domain([0, $height]).range([0, $height]);
 
   $: treeMapFn = treemap()
-    .tile(treemapBinary)
+    .tile(treemapSquarify)
     // .padding(1)
     // .paddingInner(1)
     // .paddingOuter(1)
@@ -67,7 +72,8 @@
 
   // When zooming in, draw the new nodes on top, and fade them in.
   function zoomin(d) {
-    if (d.children && d.depth <= 4) {
+    console.log(d);
+    if (d.children && d.depth <= 5) {
       x = x.domain([d.x0, d.x1]);
       y = y.domain([d.y0, d.y1]);
       root = d;
@@ -149,24 +155,26 @@
         height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0)}
         fill={isEqual(d, root) ? "#fff" : color[getCategory(d, 1)]}
       />
-      <clipPath id={`node-${i}`}>
-        <use xlink:href={`#rect-${i}`} />
-      </clipPath>
-      <text class="cat" clip-path={`url(#node-${i})`} x={6} y={10}>
-        {isEqual(d, root) && d.data[0] && d.depth > 2
-          ? `${getCategory(d, 2)} > ${d.data[0]}`
-          : d.data[0]
-          ? d.data[0]
-          : "Budget"}
-      </text>
-      <text
-        class="value"
-        clip-path={`url(#node-${i})`}
-        x={6}
-        y={isEqual(d, root) ? 35 : 25}
-      >
-        {formatDollars(d.value)}
-      </text>
+      {#if d.depth <= 5 && d.value / root.value > 0.03}
+        <clipPath id={`node-${i}`}>
+          <use xlink:href={`#rect-${i}`} />
+        </clipPath>
+        <text class="cat" clip-path={`url(#node-${i})`} x={6} y={10}>
+          {isEqual(d, root) && d.data[0] && d.depth > 2
+            ? `${getCategory(d, 2)} > ${d.data[0]}`
+            : d.data[0]
+            ? d.data[0]
+            : "Budget"}
+        </text>
+        <text
+          class="value"
+          clip-path={`url(#node-${i})`}
+          x={6}
+          y={isEqual(d, root) ? 35 : 25}
+        >
+          {formatDollars(d.value)}
+        </text>
+      {/if}
     </g>
     {#if hovered}
       <rect
@@ -201,7 +209,7 @@
     transition: all 1s;
   }
 
-  .node.active.depth-5,
+  .node.active.depth-6,
   .node.active.depth-0 {
     cursor: default;
   }

@@ -45,9 +45,11 @@
 >
   {#if hovered}
     <div class="breadcrumb">{getBreadcrumb(hovered.data)}</div>
-    <div class="cat">
-      {hovered.data.data[0]}
-    </div>
+    {#if hovered.data.data[0]}
+      <div class="cat">
+        {hovered.data.data[0]}
+      </div>
+    {/if}
     {#if descriptions[hovered.data.data[0]]}
       <div class="description">{descriptions[hovered.data.data[0]]}</div>
     {/if}
