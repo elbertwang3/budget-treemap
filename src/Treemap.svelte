@@ -46,6 +46,11 @@
 
   $: nodes = [root].concat(root.children);
 
+  $: rootChildrenValues = root.children.map((d) => d.value);
+  $: opacityScale = scaleLinear()
+    .domain([Math.min(...rootChildrenValues), Math.max(...rootChildrenValues)])
+    .range([0.5, 1]);
+
   // $: renderedNodes = root.children
   //   .concat(root)
   //   .concat(root.children.map((d) => d.children).flat());
@@ -154,6 +159,7 @@
         width={x(d.x1) - x(d.x0)}
         height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0)}
         fill={isEqual(d, root) ? "#fff" : color[getCategory(d, 1)]}
+        opacity={d.depth > 1 ? opacityScale(d.value) : 1}
       />
       {#if d.depth <= 5 && d.value / root.value > 0.03}
         <clipPath id={`node-${i}`}>
