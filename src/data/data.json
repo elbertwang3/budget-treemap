@@ -9577,78 +9577,6 @@
       "budget": 6129000
     },
     {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Employee Benefits",
-      "object": "Dental Coverage",
-      "budget": 9574
-    },
-    {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Employee Benefits",
-      "object": "Health Service",
-      "budget": 127372
-    },
-    {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Employee Benefits",
-      "object": "Other Benefits",
-      "budget": 7031
-    },
-    {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Employee Benefits",
-      "object": "Retirement",
-      "budget": 203902
-    },
-    {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Employee Benefits",
-      "object": "Social Security",
-      "budget": 77847
-    },
-    {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Employee Benefits",
-      "object": "Unemployment Insurance",
-      "budget": 974
-    },
-    {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Materials & Supplies",
-      "object": "Materials & Supplies",
-      "budget": 2343
-    },
-    {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Non-Personnel Services",
-      "object": "Professional Services",
-      "budget": 571826
-    },
-    {
-      "organization_group": "General City Responsibilities",
-      "department": "SDA Sheriff Accountability OIG",
-      "program": "Operating",
-      "character": "Salaries",
-      "object": "Permanent Salaries",
-      "budget": 973009
-    },
-    {
       "organization_group": "Human Welfare & Neighborhood Development",
       "department": "Children & Families Commission (CFC)",
       "program": "Operating",
@@ -17247,6 +17175,78 @@
       "character": "Transfer Adjustment - Uses",
       "object": "ELIMUC TRANSFER ADJ-USES CITY",
       "budget": -7756135
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Employee Benefits",
+      "object": "Dental Coverage",
+      "budget": 9574
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Employee Benefits",
+      "object": "Health Service",
+      "budget": 127372
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Employee Benefits",
+      "object": "Other Benefits",
+      "budget": 7031
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Employee Benefits",
+      "object": "Retirement",
+      "budget": 203902
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Employee Benefits",
+      "object": "Social Security",
+      "budget": 77847
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Employee Benefits",
+      "object": "Unemployment Insurance",
+      "budget": 974
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Materials & Supplies",
+      "object": "Materials & Supplies",
+      "budget": 2343
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Non-Personnel Services",
+      "object": "Professional Services",
+      "budget": 571826
+    },
+    {
+      "organization_group": "Public Protection",
+      "department": "SDA Sheriff Accountability OIG",
+      "program": "Operating",
+      "character": "Salaries",
+      "object": "Permanent Salaries",
+      "budget": 973009
     },
     {
       "organization_group": "Public Protection",

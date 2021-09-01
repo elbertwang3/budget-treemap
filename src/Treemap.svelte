@@ -159,7 +159,9 @@
         width={x(d.x1) - x(d.x0)}
         height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0)}
         fill={isEqual(d, root) ? "#fff" : color[getCategory(d, 1)]}
-        opacity={d.depth > 1 ? opacityScale(d.value) : 1}
+        opacity={d.depth == 1 || root.children.length == 1
+          ? 1
+          : opacityScale(d.value)}
       />
       {#if d.depth <= 5 && d.value / root.value > 0.03}
         <clipPath id={`node-${i}`}>
