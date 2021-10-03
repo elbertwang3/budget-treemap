@@ -8,6 +8,11 @@
 
   let hovered;
 
+  // function handleZoom(event) {
+  //   // alert(event.detail);
+  //   ({ nodes, root, x, y } = event.detail);
+  // }
+
   const rootHeight = 60;
   const grouped = group(
     data,
@@ -21,6 +26,11 @@
   function formatDollars(d) {
     return format("$0.3s")(d).replace(/G/, "B").toLowerCase();
   }
+
+  function handleHover(event) {
+    // console.log(event.detail);
+    hovered = event.detail;
+  }
 </script>
 
 <main>
@@ -32,13 +42,13 @@
       <Svg>
         <Treemap bind:hovered {formatDollars} {rootHeight} />
       </Svg>
+      <!-- <Labels {rootHeight} {nodes} {root} {x} {y} {formatDollars} /> -->
       <Tooltip {hovered} {formatDollars} />
     </LayerCake>
   </div>
 </main>
 
 <style>
-
   main {
     width: 100%;
     height: 100%;

@@ -38,7 +38,7 @@
         ? hovered.e.offsetY - tooltipHeight
         : hovered.e.offsetY - tooltipHeight / 2
     }px; left: ${
-      hovered.e.offsetX + tooltipWidth > $width
+      hovered.e.offsetX + tooltipWidth + offset > $width
         ? hovered.e.offsetX - tooltipWidth - offset
         : hovered.e.offsetX + offset
     }px;`}

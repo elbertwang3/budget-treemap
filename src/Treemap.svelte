@@ -8,7 +8,7 @@
   } from "d3-hierarchy";
   import { scaleLinear } from "d3-scale";
   import { some, isEqual } from "lodash";
-  import Node from "./Node.svelte";
+  // import Node from "./Node.svelte";
   import { flatGroup } from "d3-array";
   import { fade, fly } from "svelte/transition";
 
@@ -42,9 +42,9 @@
       .sum((d) => d.budget)
       .sort((a, b) => b.value - a.value)
   );
-  //   $: console.log(root);
 
   $: nodes = [root].concat(root.children);
+  // $: console.log(nodes);
 
   $: rootChildrenValues = root.children.map((d) => d.value);
   $: opacityScale = scaleLinear()
@@ -77,7 +77,7 @@
 
   // When zooming in, draw the new nodes on top, and fade them in.
   function zoomin(d) {
-    console.log(d);
+    // console.log("zoomin");
     if (d.children && d.depth <= 5) {
       x = x.domain([d.x0, d.x1]);
       y = y.domain([d.y0, d.y1]);
@@ -87,103 +87,77 @@
 
   // When zooming out, draw the old nodes on top, and fade them out.
   function zoomout(d) {
-    console.log("zooming out");
+    // console.log("zooming out");
     if (d.parent) {
       x.domain([d.parent.x0, d.parent.x1]);
       y.domain([d.parent.y0, d.parent.y1]);
       root = d.parent;
     }
   }
-
-  //   function tile(node, x0, y0, x1, y1) {
-  //     treemapBinary(node, 0, 0, $width, $height);
-  //     for (const child of node.children) {
-  //       child.x0 = x0 + (child.x0 / $width) * (x1 - x0);
-  //       child.x1 = x0 + (child.x1 / $width) * (x1 - x0);
-  //       child.y0 = y0 + (child.y0 / $height) * (y1 - y0);
-  //       child.y1 = y0 + (child.y1 / $height) * (y1 - y0);
-  //     }
-  //   }
-
-  //   function transform(node, { delay = 0, duration = 750, d }) {
-  //     return {
-  //       delay,
-  //       duration,
-  //       css: (t) =>
-  //         `transform: ${
-  //           isEqual(d, root)
-  //             ? `translate(0,${t * -rootHeight})`
-  //             : `translate(${t * x(d.x0)},${t * y(d.y0)})`
-  //         }`,
-  //     };
-  //   }
-
-  //   function resize(node, { delay = 0, duration = 750, d }) {
-  //     console.log("resizing");
-  //     const o = +getComputedStyle(node).opacity;
-
-  //     return {
-  //       delay,
-  //       duration,
-  //       css: (t) =>
-  //         `transform: width: ${t * (x(d.x1) - x(d.x0))}; height: ${
-  //           isEqual(d, root) ? t * $height : t * (y(d.y1) - y(d.y0))
-  //         }`,
-  //     };
-  //   }
-  // on:click={(event) => (isEqual(d, root) ? zoomout(root) : zoomin(d))}
-  //       transition:transform={{ d: d }}
 </script>
 
 <g class="treemap-layer">
   {#each nodes as d, i (`${d.data[0]}-${d.depth}-${d.value}`)}
-    <g
-      class={`node depth-${d.depth}`}
-      class:root={isEqual(d, root)}
-      class:active={some(nodes, d)}
-      transform={isEqual(d, root)
-        ? `translate(0,${-rootHeight})`
-        : `translate(${x(d.x0)},${y(d.y0)})`}
-      on:mousemove={(e) => {
-        if (!isEqual(d, root)) {
-          hovered = { e: e, data: d };
-        }
-      }}
-      transition:fade={{ duration: 1000 }}
-      on:click={(event) => (isEqual(d, root) ? zoomout(root) : zoomin(d))}
-      on:mouseout={() => (hovered = null)}
-      on:blur={() => (hovered = null)}
+    {#if d.value > 0}
+      <g
+        class={`node depth-${d.depth}`}
+        class:root={isEqual(d, root)}
+        class:active={some(nodes, d)}
+        transform={isEqual(d, root)
+          ? `translate(0,${-rootHeight})`
+          : `translate(${x(d.x0)},${y(d.y0)})`}
+        on:mousemove={(e) => {
+          if (!isEqual(d, root)) {
+            hovered = { e: e, data: d };
+          }
+        }}
+        transition:fade={{ duration: 1000 }}
+        on:click={(event) => (isEqual(d, root) ? zoomout(root) : zoomin(d))}
+      >
+        <rect
+          id={`rect-${i}`}
+          width={x(d.x1) - x(d.x0)}
+          height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0)}
+          fill={isEqual(d, root) ? "#fff" : color[getCategory(d, 1)]}
+          opacity={d.depth == 1 || root.children.length == 1
+            ? 1
+            : opacityScale(d.value)}
+        />
+        {#if d.depth <= 5 && d.value / root.value > 0.02}
+          <!-- <clipPath id={`node-${i}`}>
+      <use xlink:href={`#rect-${i}`} />
+    </clipPath> -->
+          <!-- <text class="cat" clip-path={`url(#node-${i})`} x={6} y={10}>
+      {isEqual(d, root) && d.data[0] && d.depth > 2
+        ? `${getCategory(d, 2)} > ${d.data[0]}`
+        : d.data[0]
+        ? d.data[0]
+        : "Budget"}
+    </text>
+    <text
+      class="value"
+      clip-path={`url(#node-${i})`}
+      x={6}
+      y={isEqual(d, root) ? 35 : 25}
     >
-      <rect
-        id={`rect-${i}`}
-        width={x(d.x1) - x(d.x0)}
-        height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0)}
-        fill={isEqual(d, root) ? "#fff" : color[getCategory(d, 1)]}
-        opacity={d.depth == 1 || root.children.length == 1
-          ? 1
-          : opacityScale(d.value)}
-      />
-      {#if d.depth <= 5 && d.value / root.value > 0.03}
-        <clipPath id={`node-${i}`}>
-          <use xlink:href={`#rect-${i}`} />
-        </clipPath>
-        <text class="cat" clip-path={`url(#node-${i})`} x={6} y={10}>
-          {isEqual(d, root) && d.data[0] && d.depth > 2
-            ? `${getCategory(d, 2)} > ${d.data[0]}`
-            : d.data[0]
-            ? d.data[0]
-            : "Budget"}
-        </text>
-        <text
-          class="value"
-          clip-path={`url(#node-${i})`}
-          x={6}
-          y={isEqual(d, root) ? 35 : 25}
-        >
-          {formatDollars(d.value)}
-        </text>
-      {/if}
-    </g>
+      {formatDollars(d.value)}
+    </text> -->
+          <foreignObject
+            x="8"
+            y="10"
+            width={x(d.x1) - x(d.x0) - 16}
+            height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0) - 10}
+          >
+            <div class="cat">{isEqual(d, root) ? "Budget" : d.data[0]}</div>
+            <div class="value">{formatDollars(d.value)}</div>
+          </foreignObject>
+        {:else if d.depth > 5}
+          <!-- else if content here -->
+        {:else}
+          <text class="cat" x={8} y={0}>...</text>
+        {/if}
+      </g>
+    {/if}
     {#if hovered}
       <rect
         transform={`translate(${x(hovered.data.x0)},${y(hovered.data.y0)})`}
@@ -198,6 +172,15 @@
 </g>
 
 <style>
+  foreignObject {
+    font-family: "Amiko", sans-serif;
+    pointer-events: none;
+  }
+  /* div {
+    font-family: "Amiko", sans-serif;
+    pointer-events: none;
+  } */
+
   text {
     font-family: "Amiko", sans-serif;
     pointer-events: none;
@@ -251,13 +234,24 @@
   } */
 
   .cat {
-    font-size: 12px;
+    font-size: 16px;
     /* font-weight: 600; */
   }
 
   .value {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 600;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .cat {
+      font-size: 12px;
+      /* font-weight: 600; */
+    }
+
+    .value {
+      font-size: 14px;
+    }
   }
 
   .node.root .cat {
@@ -265,7 +259,7 @@
   }
 
   .node.root .value {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   *:focus {
