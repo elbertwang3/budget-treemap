@@ -2261,7 +2261,7 @@
       "department": "Public Library (LIB)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 12914
     },
     {
@@ -3093,7 +3093,7 @@
       "department": "Rec & Park Commission (REC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 109458
     },
     {
@@ -3101,7 +3101,7 @@
       "department": "Rec & Park Commission (REC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Human Rights Commission Services",
+      "object": "Human Rights Commission Svc",
       "budget": 15000
     },
     {
@@ -3197,7 +3197,7 @@
       "department": "Rec & Park Commission (REC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-CWP-Clean Water Department",
+      "object": "Clean Water Department",
       "budget": 5000
     },
     {
@@ -4277,7 +4277,7 @@
       "department": "City Administrator (ADM)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 98056
     },
     {
@@ -4461,7 +4461,7 @@
       "department": "City Administrator (ADM)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-CWP-Clean Water Department",
+      "object": "Clean Water Department",
       "budget": 525000
     },
     {
@@ -6845,7 +6845,7 @@
       "department": "Technology (DT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 71511
     },
     {
@@ -8461,7 +8461,7 @@
       "department": "Elections (REG)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "board of supervisors",
+      "object": "Board of Supervisors",
       "budget": 100000
     },
     {
@@ -9469,7 +9469,7 @@
       "department": "General/Unallocated (GEN)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 1742718
     },
     {
@@ -10477,7 +10477,7 @@
       "department": "Child Support Services (CSS)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Ef-SFGH-Others",
+      "object": "SFGH",
       "budget": 6000
     },
     {
@@ -10901,7 +10901,7 @@
       "department": "Environment (ENV)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 67733
     },
     {
@@ -12453,7 +12453,7 @@
       "department": "Human Services Agency (HSA)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Ef-SFGH-Others",
+      "object": "SFGH",
       "budget": 33350
     },
     {
@@ -13013,7 +13013,7 @@
       "department": "Rent Arbitration Board (RNT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Human Rights Commission Services",
+      "object": "Human Rights Commission Svc",
       "budget": 9600
     },
     {
@@ -15965,7 +15965,7 @@
       "department": "Juvenile Probation (JUV)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-CWP-Clean Water Department",
+      "object": "Clean Water Department",
       "budget": 265000
     },
     {
@@ -17669,7 +17669,7 @@
       "department": "Sheriff (SHF)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Ef-SFGH-Others",
+      "object": "SFGH",
       "budget": 50000
     },
     {
@@ -18333,7 +18333,7 @@
       "department": "Airport Commission (AIR)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 1501035
     },
     {
@@ -18453,7 +18453,7 @@
       "department": "Airport Commission (AIR)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-CWP-Clean Water Department",
+      "object": "Clean Water Department",
       "budget": 53000
     },
     {
@@ -18989,7 +18989,7 @@
       "department": "Building Inspection (DBI)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Assessor'S Office",
+      "object": "Assessor’s Office",
       "budget": 3531406
     },
     {
@@ -19133,7 +19133,7 @@
       "department": "Building Inspection (DBI)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 59131
     },
     {
@@ -19669,7 +19669,7 @@
       "department": "Public Works (DPW)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 1097152
     },
     {
@@ -19773,7 +19773,7 @@
       "department": "Public Works (DPW)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-CWP-Clean Water Department",
+      "object": "Clean Water Department",
       "budget": 131600
     },
     {
@@ -20189,7 +20189,7 @@
       "department": "Economic & Workforce Development (ECN)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 100000
     },
     {
@@ -20197,7 +20197,7 @@
       "department": "Economic & Workforce Development (ECN)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Human Rights Commission Services",
+      "object": "Human Rights Commission Svc",
       "budget": 75000
     },
     {
@@ -20741,7 +20741,7 @@
       "department": "Municipal Transporation (MTA)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "board of supervisors",
+      "object": "Board of Supervisors",
       "budget": 35318
     },
     {
@@ -20909,7 +20909,7 @@
       "department": "Municipal Transporation (MTA)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 218917
     },
     {
@@ -21789,7 +21789,7 @@
       "department": "Port (PRT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "board of supervisors",
+      "object": "Board of Supervisors",
       "budget": 3609
     },
     {
@@ -21941,7 +21941,7 @@
       "department": "Port (PRT)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 218917
     },
     {
@@ -22541,7 +22541,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Administrative",
       "character": "Services Of Other Depts",
-      "object": "Sr-CWP-Clean Water Department",
+      "object": "Clean Water Department",
       "budget": 500000
     },
     {
@@ -23141,7 +23141,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "board of supervisors",
+      "object": "Board of Supervisors",
       "budget": 123069
     },
     {
@@ -23349,7 +23349,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "GF-Human Rights Commission",
+      "object": "Human Rights Commission",
       "budget": 1617447
     },
     {
@@ -23485,7 +23485,7 @@
       "department": "Public Utilities (PUC)",
       "program": "Operating",
       "character": "Services Of Other Depts",
-      "object": "Sr-CWP-Clean Water Department",
+      "object": "Clean Water Department",
       "budget": 2191000
     },
     {
@@ -23938,10 +23938,6 @@
     {
       "old": "GF-Board Of Supervisors",
       "new": "Board of Supervisors"
-    },
-    {
-      "old": "GF-Board Of Supervisors",
-      "new": "board of supervisors"
     },
     {
       "old": "Bldg",
@@ -24642,6 +24638,26 @@
     {
       "old": "ef-Port Commission",
       "new": "Port Commission"
+    },
+    {
+      "old": "GF-Assessor'S Office",
+      "new": "Assessor’s Office"
+    },
+    {
+      "old": "Ef-SFGH-Others",
+      "new": "SFGH"
+    },
+    {
+      "old": "Sr-CWP-Clean Water Department",
+      "new": "Clean Water Department"
+    },
+    {
+      "old": "GF-Human Rights Commission",
+      "new": "Human Rights Commission"
+    },
+    {
+      "old": "City Hall Fellows Progra,",
+      "new": "City Hall Fellows Program"
     }
   ]
 }

@@ -30,12 +30,13 @@
   $: y = scaleLinear().domain([0, $height]).range([0, $height]);
 
   $: treeMapFn = treemap()
-    .tile(treemapSquarify)
+    .tile(treemapBinary)
     // .padding(1)
     // .paddingInner(1)
     // .paddingOuter(1)
     .round(false)
     .size([$width, $height]);
+  $: console.log($data);
 
   $: root = treeMapFn(
     hierarchy($data)
@@ -43,8 +44,8 @@
       .sort((a, b) => b.value - a.value)
   );
 
-  $: nodes = [root].concat(root.children);
-  // $: console.log(nodes);
+  $: nodes = [root].concat(root.children).filter((d) => d.value > 0);
+  $: console.log(nodes);
 
   $: rootChildrenValues = root.children.map((d) => d.value);
   $: opacityScale = scaleLinear()
@@ -111,6 +112,12 @@
             hovered = { e: e, data: d };
           }
         }}
+        on:mouseout={() => {
+          hovered = null;
+        }}
+        on:blur={() => {
+          hovered = null;
+        }}
         transition:fade={{ duration: 1000 }}
         on:click={(event) => (isEqual(d, root) ? zoomout(root) : zoomin(d))}
       >
@@ -123,7 +130,7 @@
             ? 1
             : opacityScale(d.value)}
         />
-        {#if d.depth <= 5 && d.value / root.value > 0.02}
+        {#if d.depth <= 5 && d.value / root.value > 0.035}
           <!-- <clipPath id={`node-${i}`}>
       <use xlink:href={`#rect-${i}`} />
     </clipPath> -->
@@ -143,10 +150,10 @@
       {formatDollars(d.value)}
     </text> -->
           <foreignObject
-            x="8"
-            y="10"
-            width={x(d.x1) - x(d.x0) - 16}
-            height={isEqual(d, root) ? $height : y(d.y1) - y(d.y0) - 10}
+            x={0}
+            y={0}
+            width={x(d.x1) - x(d.x0)}
+            height={isEqual(d, root) ? rootHeight : y(d.y1) - y(d.y0)}
           >
             <div class="cat">{isEqual(d, root) ? "Budget" : d.data[0]}</div>
             <div class="value">{formatDollars(d.value)}</div>
@@ -175,6 +182,7 @@
   foreignObject {
     font-family: "Amiko", sans-serif;
     pointer-events: none;
+    padding: 0.5rem;
   }
   /* div {
     font-family: "Amiko", sans-serif;
