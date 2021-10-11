@@ -130,7 +130,7 @@
             ? 1
             : opacityScale(d.value)}
         />
-        {#if d.depth <= 5 && d.value / root.value > 0.035}
+        {#if d.depth <= 5 && d.value / root.value > 0.035 || d.depth == 1}
           <!-- <clipPath id={`node-${i}`}>
       <use xlink:href={`#rect-${i}`} />
     </clipPath> -->
