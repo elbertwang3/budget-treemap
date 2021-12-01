@@ -36,7 +36,7 @@
     // .paddingOuter(1)
     .round(false)
     .size([$width, $height]);
-  $: console.log($data);
+  // $: console.log($data);
 
   $: root = treeMapFn(
     hierarchy($data)
@@ -45,7 +45,7 @@
   );
 
   $: nodes = [root].concat(root.children).filter((d) => d.value > 0);
-  $: console.log(nodes);
+  // $: console.log(nodes);
 
   $: rootChildrenValues = root.children.map((d) => d.value);
   $: opacityScale = scaleLinear()

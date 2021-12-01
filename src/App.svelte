@@ -15,7 +15,7 @@
 
   const rootHeight = 60;
   const grouped = group(
-    data.filter(d => d.budget > 0),
+    data,
     (d) => d["organization_group"],
     (d) => d.department,
     (d) => d.program,
